@@ -7,9 +7,9 @@ const fetchApiList = async () => {
 const generateNewConfirmed = async () => {
   const data = await fetchApiList();
 
-  for (let index = 0; index < data.length; index++) {
+  for (let index = 0; index < data.invitedList.length; index++) {
     const thNova = document.createElement("hr");
-    const conteudoNovo = document.createTextNode(data[index].name);
+    const conteudoNovo = document.createTextNode(data.invitedList[index].name);
     thNova.appendChild(conteudoNovo);
 
     const tbody = document.getElementById("tbody");
