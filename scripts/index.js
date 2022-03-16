@@ -11,6 +11,8 @@ const addConviviality = (data, url) => {
     console.log(this.responseText)
   }
 
+  input.value = '';
+
   return request.responseText
 }
 
