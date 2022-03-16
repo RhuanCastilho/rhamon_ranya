@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+/*=========VARIAVEIS=============== */
+:root {
+  --header-height: 1.5rem;
+
+  /* colors */
+  --hue: 290;
+  /* HSL color mode */
+  --base-color: hsl(var(--hue) 66% 57%);
+  --base-color-second: hsl(var(--hue) 115% 88%);
+  --base-color-alt: hsl(var(--hue) 57% 53%);
+  --title-color: hsl(var(--hue) 41% 10%);
+  --text-color: hsl(0 0% 46%);
+  --text-color-light: hsl(0 0% 98%);
+  --body-color: hsl(0 0% 98%);
+  --base-color-second2: hsl(var(--hue) 115% 70%);
+
+  /* FONTS*/
+  --title-font-size: 1.875rem;
+  --subtitle-font-size: 1rem;
+
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'DM sans,', sans-serif;
+}
+
+/*=========BASE=============== */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font: 400 1rem var(--body-font);
+  color: var(--text-color);
+  background: var(--body-color);
+  -webkit-font-smoothing: antialiased;
+}
+.title {
+  font: 700 1.875rem var(--title-font);
+  color: var(--title-color);
+  -webkit-font-smoothing: auto;
+}
+
+.button {
+  background-color: var(--base-color-alt);
+  color: white;
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 2rem;
+  font: 400 1rem var(--body-font);
+  transition: all 0.3s ease-in-out;
+  border: none;
+}
+
+.button:hover {
+  background-color: #111;
+  box-shadow: 2px 2px 7px 1px rgba(3, 3, 3, 0.18);
+  transform: scale(0.95);
+}
+
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+.section {
+  padding: calc(5rem + var(--header-height)) 0;
+}
+
+.section .subtitle {
+  font-size: var(--subtitle-font-size);
+}
+
+.section .title {
+  margin-bottom: 1rem;
+}
+
+.section header {
+  margin-bottom: 4rem;
+}
+
+.section header strong {
+  color: var(--base-color);
+}
+
+#header {
+  border-bottom: 1px solid;
+  margin-bottom: 0;
+  display: flex;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--body-color);
+
+  justify-content: center;
+}
+
+#header blockquote {
+  display: flex;
+  padding: 1.125rem;
+  font-family: var(--title-font);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+#header div {
+  color: black;
+}
+
+#header p {
+  color: var(--base-color-second2);
+}
+
+#header span {
+  color: var(--base-color-alt);
+}
